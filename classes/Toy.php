@@ -3,6 +3,13 @@ class Toy extends Products
 {
     private string $recommendedAge;
     private string $material;
+
+    public function __construct($image, $name, $price, $category, $recommendedAge, $material)
+    {
+        parent::__construct($image, $name, $price, $category);
+        $this->setAge($recommendedAge);
+        $this->setMaterial($material);
+    }
     public function setAge($recommendedAge)
     {
         $this->recommendedAge = $recommendedAge;

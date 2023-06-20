@@ -1,7 +1,5 @@
 <?php
-include __DIR__ . "/classes/Products.php";
-include __DIR__ . "/classes/Toy.php";
-include __DIR__ . "/classes/Food.php";
+include __DIR__ . "/data.php";
 
 ?>
 
@@ -19,26 +17,28 @@ include __DIR__ . "/classes/Food.php";
 </head>
 
 <body>
-  <div class="container p-3">
-    <div class="card" style="width: 18rem">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
+  <div class="container p-3 d-flex flex-wrap justify-content-between">
+    <?php foreach ($products as $product) : ?>
+      <div class="card m-2" style="width: 26%">
+
+        <img style="height: 360px;" src="<?php echo $product->getImage(); ?>" class="card-img-top p-2" alt="<?php echo $product->getName(); ?>" />
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $product->getName(); ?></h5>
+
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Price: <?php echo $product->getPrice(); ?></li>
+          <li class="list-group-item">Category: <?php echo $product->getCategory(); ?></li>
+          <?php if ($product instanceof Toy) : ?>
+            <li class="list-group-item">Material: <?php echo $product->getMaterial(); ?></li>
+            <li class="list-group-item">Recommended Age: <?php echo $product->getAge(); ?></li>
+          <?php elseif ($product instanceof Food) : ?>
+            <li class="list-group-item">Expiration Date: <?php echo $product->getExpirationDate(); ?></li>
+            <li class="list-group-item">Weight: <?php echo $product->getWeight(); ?></li>
+          <?php endif; ?>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>
 </body>
 

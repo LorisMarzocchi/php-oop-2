@@ -7,8 +7,9 @@ class Products
     private string $category;
 
 
-    public function __construct($name, $price, $image, $category)
+    public function __construct($image, $name, $price, $category)
     {
+
         $this->setImage($image);
         $this->setName($name);
         $this->setPrice($price);
