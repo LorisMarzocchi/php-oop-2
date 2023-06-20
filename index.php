@@ -1,5 +1,7 @@
 <?php
-
+include __DIR__ . "/classes/Products.php";
+include __DIR__ . "/classes/Toy.php";
+include __DIR__ . "/classes/Food.php";
 
 ?>
 
