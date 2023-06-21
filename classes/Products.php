@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "/AnimalsTraits.php";
+include __DIR__ . "/AnimalTrait.php";
 class Products
 {
     private string $image;

@@ -30,13 +30,7 @@ include __DIR__ . "/data.php";
           <li class="list-group-item">Price: <?php echo $product->getPrice(); ?></li>
           <li class="list-group-item">Category: <?php echo $product->getCategory(); ?></li>
           <li class="list-group-item">For:
-            <?php if ($product->getAnimalType() === 'dog') : ?>
-              Dog
-              <i class="fa-solid fa-dog"></i>
-            <?php elseif ($product->getAnimalType() === 'cat') : ?>
-              Cat
-              <i class="fa-solid fa-cat"></i>
-            <?php endif; ?>
+            <?php echo $product->getAnimalTypeIcon(); ?>
           </li>
 
           <?php if ($product instanceof Toy) : ?>

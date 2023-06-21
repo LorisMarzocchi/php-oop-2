@@ -11,9 +11,10 @@ $products = [
     new Food('image/635813-cesar-.jpg', 'Cesar', 'dog', '12.90 €', 'Food', '31-10-2024', '24 x 100g'),
     new Food('image/nutrimi-all-breeds-cibo-per-cane-adulto-400-gr-maiale.jpg', 'Nutrimi-all-breeds', 'dog', '6.90 €', 'Food', '31-10-2024', '500g'),
     new Food('image/royal_canin_mini_adult.jpg', 'Royal_canin_adult', 'dog', '15.99 €', 'Food', '31-10-2024', '2kg'),
-    new Toy('gimcat-gioco-per-gatti-interattivo-tornado.jpg', 'Gimcat', 'cat', '19.99 €', 'Toys', ' 1 years', 'Rubber (TPR)'),
-    new Food('catfood_.jpg', 'NovaFoods Natural trainer', 'cat', '19.99 €', 'Food', '31-10-2024', '1.5kg'),
-    new Food('54454_2.jpg', 'Gourmet Mon Petit', 'cat', '9.99 €', 'Food', '31-10-2024', '1kg'),
+
+    new Toy('image/gimcat-gioco-per-gatti-interattivo-tornado.jpg', 'Gimcat', 'cat', '19.99 €', 'Toys', ' 1 years', 'Rubber (TPR)'),
+    new Food('image/catfood_.jpg', 'NovaFoods Natural trainer', 'cat', '19.99 €', 'Food', '31-10-2024', '1.5kg'),
+    new Food('image/54454_2.png', 'Gourmet Mon Petit', 'cat', '9.99 €', 'Food', '31-10-2024', '1kg'),
 
 
 ];
