@@ -1,17 +1,21 @@
 <?php
+include __DIR__ . "/AnimalsTraits.php";
 class Products
 {
     private string $image;
     private string $name;
+    use Animals;
     private string $price;
     private string $category;
 
 
-    public function __construct($image, $name, $price, $category)
+
+    public function __construct($image, $name, $animalType, $price, $category)
     {
 
         $this->setImage($image);
         $this->setName($name);
+        $this->setAnimalType($animalType);
         $this->setPrice($price);
         $this->setCategory($category);
     }

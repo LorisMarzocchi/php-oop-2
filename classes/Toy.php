@@ -4,9 +4,9 @@ class Toy extends Products
     private string $recommendedAge;
     private string $material;
 
-    public function __construct($image, $name, $price, $category, $recommendedAge, $material)
+    public function __construct($image, $name, $animalType, $price, $category, $recommendedAge, $material)
     {
-        parent::__construct($image, $name, $price, $category);
+        parent::__construct($image, $name, $animalType, $price, $category);
         $this->setAge($recommendedAge);
         $this->setMaterial($material);
     }

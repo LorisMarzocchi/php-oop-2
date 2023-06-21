@@ -4,9 +4,9 @@ class Food extends Products
     private string $expirationDate;
     private string $weight;
 
-    public function __construct($image, $name, $price, $category, $expirationDate, $weight)
+    public function __construct($image, $name, $animalType, $price, $category, $expirationDate, $weight)
     {
-        parent::__construct($image, $name, $price, $category);
+        parent::__construct($image, $name, $animalType, $price, $category);
         $this->setExpirationDate($expirationDate);
         $this->setWeight($weight);
     }
