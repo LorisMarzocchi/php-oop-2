@@ -15,6 +15,8 @@ $products = [
     new Toy('image/gimcat-gioco-per-gatti-interattivo-tornado.jpg', 'Gimcat', 'cat', '19.99 €', 'Toys', ' 1 years', 'Rubber (TPR)'),
     new Food('image/catfood_.jpg', 'NovaFoods Natural trainer', 'cat', '19.99 €', 'Food', '31-10-2024', '1.5kg'),
     new Food('image/54454_2.png', 'Gourmet Mon Petit', 'cat', '9.99 €', 'Food', '31-10-2024', '1kg'),
+    // se animalType resta vuoto allora mostra il messaggio di errore
+    new Food('image/54454_2.png', 'Gourmet Mon Petit', '', '9.99 €', 'Food', '31-10-2024', '1kg'),
 
 
 ];

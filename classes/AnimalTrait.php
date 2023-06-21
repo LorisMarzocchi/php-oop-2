@@ -15,12 +15,16 @@ trait Animals
     }
     public function getAnimalTypeIcon(): string
     {
-        if ($this->animalType === 'dog') {
-            return 'Dog <i class="fa-solid fa-dog"></i>';
-        } elseif ($this->animalType === 'cat') {
-            return 'Cat <i class="fa-solid fa-cat"></i>';
+        try {
+            if ($this->animalType === 'dog') {
+                return 'Dog <i class="fa-solid fa-dog"></i>';
+            } elseif ($this->animalType === 'cat') {
+                return 'Cat <i class="fa-solid fa-cat"></i>';
+            } else {
+                throw new Exception('Invalid animal type.');
+            }
+        } catch (Exception $e) {
+            return $e->getMessage();
         }
-
-        return '';
     }
 }
